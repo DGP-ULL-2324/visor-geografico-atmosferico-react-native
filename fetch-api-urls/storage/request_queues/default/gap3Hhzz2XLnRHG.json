@@ -1,0 +1,9 @@
+{
+	"id": "gap3Hhzz2XLnRHG",
+	"json": "{\"id\":\"gap3Hhzz2XLnRHG\",\"url\":\"https://datos.tenerife.es/es/datos/conjuntos-de-datos?filter%5bgroups%5d%5b0%5d=medio-ambiente\",\"loadedUrl\":\"https://datos.tenerife.es/es/datos/conjuntos-de-datos?filter%5bgroups%5d%5b0%5d=medio-ambiente\",\"uniqueKey\":\"https://datos.tenerife.es/es/datos/conjuntos-de-datos?filter%5Bgroups%5D%5B0%5D=medio-ambiente\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-12-09T23:23:06.294Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://datos.tenerife.es/es/datos/conjuntos-de-datos?filter%5Bgroups%5D%5B0%5D=medio-ambiente",
+	"url": "https://datos.tenerife.es/es/datos/conjuntos-de-datos?filter%5bgroups%5d%5b0%5d=medio-ambiente"
+}
