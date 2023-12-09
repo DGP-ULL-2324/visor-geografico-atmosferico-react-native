@@ -19,18 +19,21 @@ export default class URLScrapper {
   #scrapper = undefined;
   #output = undefined;
   #url = undefined;
+  #partialLinkTitle = undefined;
 
   /**
-   * @param {object} repositoryInfo with name of repository and author of the
-   *    repository.
+   * 
+   * @param {string} partialLinkTitle partial content that the meteorology entry
+   *    must have to extract it's link.
    */
-  constructor() {
+  constructor(partialLinkTitle) {
     this.#output = [];
     this.#url = 'https://datos.tenerife.es/es/datos/conjuntos-de-datos?filter%5bgroups%5d%5b0%5d=medio-ambiente';
+    this.#partialLinkTitle = partialLinkTitle;
 
     const requestHandler = this.#myHandler.bind(this);
     this.#scrapper = new PlaywrightCrawler({
-      headless: false,
+      headless: true,
       navigationTimeoutSecs: 100000,
       requestHandlerTimeoutSecs: 100000,
       browserPoolOptions: {
@@ -51,7 +54,7 @@ export default class URLScrapper {
     try {
       const buttonNextPageLocator = page.locator('a.forward', { timeout: 5000 });
       const linkLocator =
-          page.getByRole('link').getByText('Datos meteorológicos');
+          page.getByRole('link').getByText(this.#partialLinkTitle);
 
       await page.waitForLoadState();
 
