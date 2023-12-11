@@ -69,9 +69,8 @@ async function getStationSensors(station) {
 }
 
 async function fullLoad() {
-    loadSensorlessStations()
+    return loadSensorlessStations()
         .then(st => addSensorsAndMeassuresToStations(st))
-        .then(s => console.log(s[0].sensors[0]))
 }
 
-fullLoad()
+export default fullLoad
