@@ -1,0 +1,6 @@
+{
+    "baseUrl" : "https://datos.tenerife.es/api/meteo/latest/",
+    "stationsEndpoint" : "stations",
+    "sensorsEndpoint" : "stations/${idWeatherstation}/sensors",
+    "readingsEnpoint" : "readings/summarized/station/${idWeatherstation}/year/${year}/${page}?month=${month}"
+}
