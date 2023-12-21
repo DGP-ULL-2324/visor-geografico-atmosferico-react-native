@@ -1,4 +1,4 @@
-import settings from '../config/external-api.json' assert { type: "json" };
+import settings from '../../resources/config/external-api.json' assert { type: "json" };
 
 async function loadSensorlessStations() {
     return fetch(settings.baseUrl + settings.stationsEndpoint)
